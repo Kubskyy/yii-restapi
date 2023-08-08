@@ -47,7 +47,11 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                ['class'=>UrlRule::class, 'controller'=>'post'],
+                ['class'=>UrlRule::class, 'controller'=>['post', 'comment']],
+                [
+                    'pattern' => 'posts/<postId:\d+>/comments',
+                    'route' => 'comment/index'
+                ]
             ],
         ],
     ],

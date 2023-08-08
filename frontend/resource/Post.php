@@ -4,8 +4,9 @@ namespace frontend\resource;
 
 class Post extends \common\models\Post
 {
-    public function fields()
+    public function extraFields()
     {
-        return ['id', 'title', 'body', 'created_at'];
+        return ['comments', 'createdBy'];
     }
+
 }
